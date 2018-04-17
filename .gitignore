@@ -101,7 +101,7 @@ ENV/
 ### Other ###
 
 # Generated HTML files
-*.html
+
 
 # .DS_Store
 .DS_Store
