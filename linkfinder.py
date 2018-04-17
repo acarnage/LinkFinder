@@ -216,7 +216,7 @@ def html_save(html):
 
 # Convert input to URLs or JS files
 urls,base = parser_input(args.input)  
-
+urls2=urls
 if args.site:
     r = requests.get(urls[0])
     soup = BeautifulSoup(r.content, "lxml")
@@ -227,11 +227,11 @@ if args.site:
         if  url.split('/')[0] not in ["https:","https:"]:    
             print "&&&&&&&&"
             print url        
-            src[i] = urls[0] + url
+            urls2.append( urls[0] + url)
             print urls[0] + url
     print(src)
     print ("#########")
-    urls = src
+    urls2 = src
 
 
 
