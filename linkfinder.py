@@ -233,11 +233,13 @@ if args.site:
     print ("#########")
     urls2 = src
 
-
+for i,elem in enumerate(urls2):
+	if elem[:4] != "http":
+		urls2[i] = base + urls2[i]
 
 # Convert URLs to JS
 html = ''
-for url in urls:
+for url in urls2:
     if not args.burp:
         try:
             print url
